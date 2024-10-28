@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>광고/팝업 추가</title>
+    <title>팝업 추가</title>
     <style>
         body {
             font-family: 'Arial', sans-serif;
@@ -66,11 +66,11 @@
 </head>
 <body>
 
-    <h2>새 광고/팝업 추가</h2>
+    <h2>팝업 추가</h2>
 
     <form action="addAdAction.jsp" method="post">
         <div class="form-group">
-            <label for="adTitle">광고/팝업 제목</label>
+            <label for="adTitle">팝업 제목</label>
             <input type="text" id="adTitle" name="adTitle" required>
         </div>
 
@@ -78,7 +78,6 @@
             <label for="adType">유형 선택</label>
             <select id="adType" name="adType" required>
                 <option value="popup">팝업</option>
-                <option value="ad">광고</option>
             </select>
         </div>
 
@@ -92,7 +91,7 @@
             <input type="date" id="endDate" name="endDate" required>
         </div>
 
-        <input type="submit" class="btn" value="광고/팝업 추가">
+        <input type="submit" class="btn" value="팝업 추가">
         <button type="button" class="btn btn-cancel" onclick="window.location.href='adManagement.jsp'">취소</button>
     </form>
 

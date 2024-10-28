@@ -44,7 +44,7 @@ body {
 	padding: 3px;
 	position: relative; /* 하위 메뉴의 위치를 올바르게 참조 */
 	z-index: 0; /* 전체 레이아웃에서 기본 z-index */
-	height: 300px;
+	height: 200px;
 	
 }
 
@@ -69,11 +69,17 @@ body {
 }
 
 .productsMenu:hover {
-	background-color: #F5F5DC;
+	background-color: #d80000;
 }
+
 .innercontant {
 	margin-left: 30px;
 }
+
+.introWrap{
+	margin-left: 30px;
+}
+
 
 </style>
 </head>
@@ -111,7 +117,8 @@ body {
 			<section class="innercontant">
 			<br>
 			<h1> [회사소개] </h1>
-			<article class="wrap introWrap">
+			<br>
+			<article class="introWrap">
 
 			<img  alt="자사브랜드" src="../resources/imgs/회사소개1.png">
 			<img  alt="자사브랜드" src="../resources/imgs/회사소개2.png">

@@ -19,11 +19,11 @@
 
         .admin-container {
             display: grid;
-            grid-template-columns: 200px 1fr 300px;
+            grid-template-columns: 200px 1fr;
             grid-template-rows: auto 1fr;
             grid-template-areas: 
-                "header header header"
-                "sidebar main settings";
+                "header header"
+                "sidebar main";
             height: 100vh;
         }
 
@@ -114,33 +114,6 @@
             border: none;
             border-radius: 8px;
         }
-
-        /* 우측 설정 설명 */
-        .settings {
-            grid-area: settings;
-            background-color: #fafafa;
-            padding: 20px;
-            border-left: 1px solid #ccc;
-        }
-
-        /* 회사 로고 변경 버튼 스타일 */
-        .logo-button {
-            display: inline-block;
-            background-color: #007bff; /* 버튼 배경색 */
-            color: white;
-            padding: 10px 15px;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 14px;
-            transition: background-color 0.3s ease; /* 호버 시 색 변경 효과 */
-            border: 1px solid transparent; /* 보더 스타일 */
-        }
-
-        .logo-button:hover {
-            background-color: #0056b3; /* 호버 시 버튼 배경색 변경 */
-            border-color: #004085; /* 호버 시 보더 색상 */
-        }
     </style>
 </head>
 <body>
@@ -149,7 +122,7 @@
             <div class="logo">
                 <img src="../resources/imgs/logo.png" alt="회사로고">
             </div>
-            <a href="${pageContext.request.contextPath}" class="home-button">변경 확인</a>
+            <a href="${pageContext.request.contextPath}" class="home-button">홈페이지 가기</a>
             <div class="company-name">QKC</div>
         </header>
 
@@ -159,7 +132,6 @@
                 <li><a href="AdminList" target="contentFrame">사용자관리</a></li>
                 <li><a href="Content" target="contentFrame">콘텐츠관리</a></li>
                 <li><a href="PopupList" target="contentFrame">광고관리</a></li>
-                <li><a href="#" target="contentFrame">홈페이지 수정</a></li>
             </ul>
         </nav>
 
@@ -169,13 +141,6 @@
                 <iframe src="dashboard" name="contentFrame"></iframe>
             </section>
         </main>
-
-        <aside class="settings">
-            <h3>설정</h3>
-            <ul>
-                <li><a href="#" class="logo-button">회사 로고 변경</a></li>
-            </ul>
-        </aside>
     </div>
 </body>
 </html>

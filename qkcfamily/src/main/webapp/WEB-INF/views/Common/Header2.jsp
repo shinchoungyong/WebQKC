@@ -141,8 +141,8 @@
                 <li><a href="${pageContext.request.contextPath}/ImportBusiness/Product">Import Business</a></li>
                 <li><a href="${pageContext.request.contextPath}/ContactUs/contactUs">Contact Us</a></li>
             </ul>
-            <div class="navbar-search">
-                <form action="#" method="POST">
+           <div class="navbar-search">
+                <form action="${pageContext.request.contextPath}/Common/HeadSearch" method="POST">
                     <input type="text" placeholder="검색어를 입력하세요" name="search_str">
                     <button type="submit">
                         <img src="../resources/imgs/search-img.png" alt="돋보기" style="width: 30px; height: 30px;">

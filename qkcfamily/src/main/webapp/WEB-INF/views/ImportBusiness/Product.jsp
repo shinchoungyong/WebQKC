@@ -65,7 +65,7 @@ body {
 }
 
 .productsMenu:hover {
-	background-color: #F5F5DC;
+	background-color: #d80000;
 }
 
 /* 하위 메뉴 */

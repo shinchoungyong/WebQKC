@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>aboutM</title>
+<title>Cl&Brand</title>
 <style>
 /* 전체 적용 CSS */
 html, body {
@@ -44,7 +44,7 @@ body {
 	padding: 3px;
 	position: relative; /* 하위 메뉴의 위치를 올바르게 참조 */
 	z-index: 0; /* 전체 레이아웃에서 기본 z-index */
-	height: 300px;
+	height: 200px;
 	
 }
 
@@ -69,11 +69,17 @@ body {
 }
 
 .productsMenu:hover {
-	background-color: #F5F5DC;
+	background-color: #d80000;
 }
+
 .innercontant {
 	margin-left: 30px;
 }
+
+.introWrap{
+	margin-left: 30px;
+}
+
 
 </style>
 </head>
@@ -107,10 +113,11 @@ body {
 			
 			
 			
-			<section>
+			<section class="innercontant">
 			<br>
 			<h1> [CI & Brand] </h1>
-			<article class="wrap introWrap">
+			<br>
+			<article class="introWrap">
 
 			<img  alt="ci" src="../resources/imgs/ci1.png">
 			<img  alt="ci" src="../resources/imgs/ci2.png">
