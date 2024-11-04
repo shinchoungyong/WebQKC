@@ -27,7 +27,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100vh; /* 최소 높이를 100vh로 설정 */
-}/* products body */
+} /* products body */
 .productBody {
 	display: flex;
 	min-height: 100vh; /* 최소 높이를 100vh로 설정 */
@@ -42,7 +42,6 @@ body {
 	gap: 20px;
 	height: 300px;
 }
-
 
 .product {
 	text-align: center;
@@ -93,9 +92,9 @@ body {
 </style>
 </head>
 <body>
-	
+
 	<jsp:include page="../Common/Header2.jsp" />
-	
+
 
 	<!-- 홍보용 이미지 -->
 	<div class="aboutPromotion" align="center">
@@ -103,21 +102,24 @@ body {
 			src="../resources/imgs/productsM.jpg">
 	</div>
 
-<br>
+	<br>
 	<div class="productBody">
 		<jsp:include page="../Products/SideMenu.jsp" />
 
-			<div class="products">
-				<c:forEach var="product" items="${List}">
-					<div class="product">
-						<img src="${product.pd_img}" alt="제품이미지">
+		<div class="products">
+			<c:forEach var="product" items="${List}">
+				<div class="product">
+					<a href="productDetail/${product.pd_idx}"> <img
+						src="${product.pd_img}" alt="제품이미지">
+					</a> <a href="productDetail/${product.pd_idx}">
 						<div class="product-name">${product.pd_name}</div>
-					</div>
-				</c:forEach>
+					</a>
+				</div>
+			</c:forEach>
 
-			</div>
 		</div>
-	
+	</div>
+
 	<!-- Pagination -->
 	<div class="pagination">
 		<c:if test="${currentPage > 1}">
@@ -134,8 +136,8 @@ body {
 
 
 	<br>
-	
+
 	<jsp:include page="../Common/Footer.jsp" />
-	
+
 </body>
 </html>

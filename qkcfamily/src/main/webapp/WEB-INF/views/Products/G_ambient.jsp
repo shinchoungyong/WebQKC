@@ -26,7 +26,6 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
-
 }
 
 /* 10/21  products body */
@@ -42,7 +41,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
-	height : 300px;
+	height: 300px;
 }
 
 .product {
@@ -112,8 +111,11 @@ body {
 		<div class="products">
 			<c:forEach var="product" items="${List}">
 				<div class="product">
-					<img src="${product.pd_img}" alt="제품이미지">
-					<div class="product-name">${product.pd_name}</div>
+					<a href="productDetail/${product.pd_idx}"> <img
+						src="${product.pd_img}" alt="제품이미지">
+					</a> <a href="productDetail/${product.pd_idx}">
+						<div class="product-name">${product.pd_name}</div>
+					</a>
 				</div>
 			</c:forEach>
 

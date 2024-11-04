@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -216,9 +217,12 @@ public class ProductController {
 		return "Common/HeadSearch";
 	}
 
-	@GetMapping("/Products/productDetail")
-	public String DetailPage() {
+	@GetMapping("/Products/productDetail/{pd_idx}")
+    public String DetailPage(@PathVariable("pd_idx") int pd_idx, Model model) {
 
-		return "Products/productDetail";
-	}
+        Product product = productMapper.getDetail(pd_idx);
+        model.addAttribute("product", product);
+       
+       return "Products/productDetail";
+    }
 }

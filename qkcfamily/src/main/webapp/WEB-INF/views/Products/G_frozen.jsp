@@ -42,7 +42,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
-	height : 300px;
+	height: 300px;
 }
 
 .product {
@@ -94,9 +94,9 @@ body {
 </style>
 </head>
 <body>
-	
+
 	<jsp:include page="../Common/Header2.jsp" />
-	
+
 
 	<!-- 홍보용 이미지 -->
 	<div class="aboutPromotion" align="center">
@@ -107,19 +107,22 @@ body {
 
 	<br>
 	<div class="productBody">
-	<jsp:include page="../Products/SideMenu.jsp" />
+		<jsp:include page="../Products/SideMenu.jsp" />
 
 		<div class="products">
-				<c:forEach var="product" items="${List}">
-					<div class="product">
-						<img src="${product.pd_img}" alt="제품이미지">
+			<c:forEach var="product" items="${List}">
+				<div class="product">
+					<a href="productDetail/${product.pd_idx}"> <img
+						src="${product.pd_img}" alt="제품이미지">
+					</a> <a href="productDetail/${product.pd_idx}">
 						<div class="product-name">${product.pd_name}</div>
-					</div>
-				</c:forEach>
+					</a>
+				</div>
+			</c:forEach>
 
-			</div>
 		</div>
-	
+	</div>
+
 	<!-- Pagination -->
 	<div class="pagination">
 		<c:if test="${currentPage > 1}">
@@ -136,8 +139,8 @@ body {
 
 
 	<br>
-	
+
 	<jsp:include page="../Common/Footer.jsp" />
-	
+
 </body>
 </html>

@@ -45,7 +45,6 @@ body {
 	height: 300px;
 }
 
-
 .product {
 	text-align: center;
 	border: 1px solid #ddd;
@@ -59,9 +58,9 @@ body {
 
 .product img {
 	width: 100%;
-    max-width: 150px; /* 최대 너비를 설정하여 너무 커지지 않게 제한 */
-    height: auto; /* 높이를 자동으로 맞춤 */
-    object-fit: cover; /* 이미지가 영역에 맞게 조정되며 비율 유지 */
+	max-width: 150px; /* 최대 너비를 설정하여 너무 커지지 않게 제한 */
+	height: auto; /* 높이를 자동으로 맞춤 */
+	object-fit: cover; /* 이미지가 영역에 맞게 조정되며 비율 유지 */
 }
 
 .product-name {
@@ -96,9 +95,9 @@ body {
 </style>
 </head>
 <body>
-	
+
 	<jsp:include page="../Common/Header2.jsp" />
-	
+
 
 	<!-- 홍보용 이미지 -->
 	<div class="aboutPromotion" align="center">
@@ -107,22 +106,25 @@ body {
 	</div>
 
 
-		<br>
-		<div class="productBody">
+	<br>
+	<div class="productBody">
 		<jsp:include page="../Products/SideMenu.jsp" />
 
 
-			<div class="products">
-				<c:forEach var="product" items="${List}">
-					<div class="product">
-						<img src="${product.pd_img}" alt="제품이미지">
+		<div class="products">
+			<c:forEach var="product" items="${List}">
+				<div class="product">
+					<a href="productDetail/${product.pd_idx}"> <img
+						src="${product.pd_img}" alt="제품이미지">
+					</a> <a href="productDetail/${product.pd_idx}">
 						<div class="product-name">${product.pd_name}</div>
-					</div>
-				</c:forEach>
+					</a>
+				</div>
+			</c:forEach>
 
-			</div>
 		</div>
-	
+	</div>
+
 	<!-- Pagination -->
 	<div class="pagination">
 		<c:if test="${currentPage > 1}">
@@ -139,8 +141,8 @@ body {
 
 
 	<br>
-	
+
 	<jsp:include page="../Common/Footer.jsp" />
-	
+
 </body>
 </html>

@@ -27,8 +27,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 1000px;
-
-} 
+}
 /* products body */
 .productBody {
 	display: flex;
@@ -44,7 +43,6 @@ body {
 	gap: 20px;
 	height: 300px;
 }
-
 
 .product {
 	text-align: center;
@@ -113,8 +111,11 @@ body {
 		<div class="products">
 			<c:forEach var="product" items="${snackList}">
 				<div class="product">
-					<img src="${product.pd_img}" alt="제품이미지">
-					<div class="product-name">${product.pd_name}</div>
+					<a href="productDetail/${product.pd_idx}"> <img
+						src="${product.pd_img}" alt="제품이미지">
+					</a> <a href="productDetail/${product.pd_idx}">
+						<div class="product-name">${product.pd_name}</div>
+					</a>
 				</div>
 			</c:forEach>
 

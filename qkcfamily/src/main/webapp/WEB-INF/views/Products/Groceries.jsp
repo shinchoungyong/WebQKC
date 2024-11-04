@@ -42,7 +42,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
 	gap: 20px;
-	height : 300px;
+	height: 300px;
 }
 
 .product {
@@ -105,15 +105,18 @@ body {
 	</div>
 
 	<br>
-	
+
 	<div class="productBody">
 		<jsp:include page="../Products/SideMenu.jsp" />
 
 		<div class="products">
 			<c:forEach var="product" items="${groceriesList}">
 				<div class="product">
-					<img src="${product.pd_img}" alt="제품이미지">
-					<div class="product-name">${product.pd_name}</div>
+					<a href="productDetail/${product.pd_idx}"> <img
+						src="${product.pd_img}" alt="제품이미지">
+					</a> <a href="productDetail/${product.pd_idx}">
+						<div class="product-name">${product.pd_name}</div>
+					</a>
 				</div>
 			</c:forEach>
 
