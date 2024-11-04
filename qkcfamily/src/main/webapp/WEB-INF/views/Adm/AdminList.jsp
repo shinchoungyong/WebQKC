@@ -152,7 +152,103 @@ tr:nth-child(even) {
       width: 80%;
    }
 }
-</style>
+/* 11/03 모달 꾸미기 및 창 변경 */
+<style>
+/* 모달 창 스타일 */
+.modal {
+   display: none;
+   position: fixed;
+   z-index: 1;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0, 0, 0, 0.5); /* 반투명한 배경 */
+}
+
+.modal-content {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: #fff;
+   padding: 15px; /* 패딩을 줄여서 높이를 작게 */
+   width: 30%; /* 너비를 30%로 설정 */
+   max-width: 400px; /* 최대 너비를 400px로 제한 */
+   max-height: 70vh; /* 최대 높이를 화면 높이의 70%로 제한 */
+   border-radius: 12px;
+   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+   font-family: 'Arial', sans-serif;
+   overflow-y: auto; /* 내용이 넘칠 경우 스크롤 */
+}
+
+/* 닫기 버튼 */
+.close {
+   color: #888;
+   float: right;
+   font-size: 24px;
+   font-weight: bold;
+}
+
+.close:hover {
+   color: #f44336;
+   cursor: pointer;
+}
+
+/* 모달 제목 */
+.modal-content h2 {
+   font-size: 20px; /* 제목 크기를 줄여서 높이 감소 */
+   margin-bottom: 15px;
+   color: #333;
+}
+
+/* 입력 필드 스타일 */
+.modal-content input[type="text"],
+.modal-content input[type="password"],
+.modal-content input[type="email"] {
+   width: 100%;
+   padding: 10px; /* 입력 필드의 패딩을 줄여 높이를 더 줄임 */
+   margin: 6px 0 12px 0;
+   border: 1px solid #ddd;
+   border-radius: 5px;
+   box-sizing: border-box;
+   font-size: 14px;
+}
+
+/* 입력 필드 포커스 효과 */
+.modal-content input[type="text"]:focus,
+.modal-content input[type="password"]:focus,
+.modal-content input[type="email"]:focus {
+   border: 1px solid #007BFF;
+   outline: none;
+}
+
+/* 확인 버튼 스타일 */
+.modal-content button[type="submit"] {
+   width: 100%;
+   padding: 10px;
+   font-size: 14px;
+   background-color: #4CAF50;
+   color: white;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+   margin-top: 8px;
+}
+
+/* 확인 버튼 호버 효과 */
+.modal-content button[type="submit"]:hover {
+   background-color: #45a049;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+   .modal-content {
+      width: 80%;
+      padding: 15px;
+   }
+}
 </style>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
