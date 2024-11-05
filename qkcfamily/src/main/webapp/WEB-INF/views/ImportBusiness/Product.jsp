@@ -169,7 +169,7 @@ body {
 	<!-- 홍보용 이미지 -->
 	<div class="aboutPromotion" align="center">
 		<img width="100%" height="200px" alt="홍보용 이미지"
-			src="../resources/imgs/importbusiness.png">
+			src="../resources/imgs/importbusiness.jpg">
 	</div>
 
 	<br>

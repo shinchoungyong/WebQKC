@@ -93,7 +93,7 @@ body {
 
 	<!-- 홍보용 이미지 -->
 	<div class="aboutPromotion" align="center">
-		<img width="100%" height="200px" alt="홍보용 이미지" src="../resources/imgs/aboutus.png">
+		<img width="100%" height="200px" alt="홍보용 이미지" src="../resources/imgs/aboutus.jpg">
 	</div>
 
 		<br>
@@ -134,7 +134,7 @@ body {
 
 
 	<br>
-	
+	<jsp:include page="../Common/ScrollToTopBtn.jsp" />
 	<jsp:include page="../Common/Footer.jsp" />
 	
 </body>

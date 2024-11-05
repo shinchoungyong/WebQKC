@@ -26,12 +26,11 @@ html, body {
 body {
 	display: flex;
 	flex-direction: column;
-	height: 1000px;
 }
 /* products body */
 .productBody {
 	display: flex;
-	min-height: 100vh; /* 최소 높이를 100vh로 설정 */
+	min-height: 150vh; 
 	margin-top: 10px;
 }
 
@@ -90,6 +89,12 @@ body {
 	background-color: #ddd;
 	border-radius: 5px;
 }
+
+a {
+	text-decoration: none; /* 기본 링크 밑줄 없애기 */
+	color : black;
+	}
+	
 </style>
 </head>
 <body>
@@ -100,7 +105,7 @@ body {
 	<!-- 홍보용 이미지 -->
 	<div class="aboutPromotion" align="center">
 		<img width="100%" height="200px" alt="홍보용 이미지"
-			src="../resources/imgs/productsM.jpg">
+			src="../resources/imgs/productsM.png">
 	</div>
 
 
@@ -138,7 +143,7 @@ body {
 
 
 	<br>
-
+	<jsp:include page="../Common/ScrollToTopBtn.jsp" />
 	<jsp:include page="../Common/Footer.jsp" />
 
 </body>

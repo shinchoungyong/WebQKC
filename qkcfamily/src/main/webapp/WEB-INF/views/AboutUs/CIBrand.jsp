@@ -20,19 +20,18 @@ html, body {
 	padding: 0;
 	box-sizing: border-box;
 }
+
 body {
 	min-height: 100vh;
-    display: flex;
-    flex-direction: column;
- 
+	display: flex;
+	flex-direction: column;
 }
 
 /* products body */
 .productBody {
 	display: flex;
-	   min-height: 100vh; /* 최소 높이를 100vh로 설정 */
+	min-height: 100vh; /* 최소 높이를 100vh로 설정 */
 }
-
 
 /* 사이드 메뉴 */
 .productsMenus {
@@ -40,12 +39,11 @@ body {
 	flex-direction: column;
 	background-color: #F5F5DC;
 	margin-right: 20px;
-	margin-left : 5px;	
+	margin-left: 5px;
 	padding: 3px;
 	position: relative; /* 하위 메뉴의 위치를 올바르게 참조 */
 	z-index: 0; /* 전체 레이아웃에서 기본 z-index */
 	height: 200px;
-	
 }
 
 .productsMenu {
@@ -76,25 +74,35 @@ body {
 	margin-left: 30px;
 }
 
-.introWrap{
-	margin-left: 30px;
+.introWrap {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr); /* 2개의 열로 설정 */
+	gap: 10px;  
+	max-width: 600px; /* 그리드의 최대 너비 */
+	margin: 0 auto; /* 가운데 정렬 */
 }
 
-
+.ciImg {
+	width: 100%;
+	min-width: 598px;
+	min-height: 240px;
+	border : 2px solid black;
+}
 </style>
 </head>
 <body>
-	
+
 	<jsp:include page="../Common/Header2.jsp" />
 
 	<!-- 홍보용 이미지 -->
 	<div class="aboutPromotion" align="center">
-		<img width="100%" height="200px" alt="홍보용 이미지" src="../resources/imgs/aboutus.png">
+		<img width="100%" height="200px" alt="홍보용 이미지"
+			src="../resources/imgs/aboutus.jpg">
 	</div>
 
-		<br>
-		<div class="productBody">
-<!-- 사이드 메뉴와 제품 리스트 -->
+	<br>
+	<div class="productBody">
+		<!-- 사이드 메뉴와 제품 리스트 -->
 		<div style="display: flex;">
 			<div class="productsMenus">
 				<div class="productsMenu">
@@ -110,28 +118,28 @@ body {
 					<a href="Import">수입사업</a>
 				</div>
 			</div>
-			
-			
-			
-			<section class="innercontant">
-			<br>
-			<h1> [CI & Brand] </h1>
-			<br>
-			<article class="introWrap">
 
-			<img  alt="ci" src="../resources/imgs/ci1.png">
-			<img  alt="ci" src="../resources/imgs/ci2.png">
-			<img  alt="ci" src="../resources/imgs/ci3.png">
-			<img  alt="ci" src="../resources/imgs/ci4.png">
-			</article>
+
+
+			<section class="innercontant">
+				<br>
+				<h1>[CI & Brand]</h1>
+				<br>
+				<article class="introWrap">
+
+					<img class="ciImg" alt="ci" src="../resources/imgs/ci1.png">
+					<img class="ciImg" alt="ci" src="../resources/imgs/ci2.png">
+					<img class="ciImg" alt="ci" src="../resources/imgs/ci3.png">
+					<img class="ciImg" alt="ci" src="../resources/imgs/ci4.png">
+				</article>
 			</section>
-			
-			</div>
+
 		</div>
+	</div>
 
 	<br>
-	
+	<jsp:include page="../Common/ScrollToTopBtn.jsp" />
 	<jsp:include page="../Common/Footer.jsp" />
-	
+
 </body>
 </html>

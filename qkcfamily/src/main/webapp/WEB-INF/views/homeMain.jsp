@@ -40,10 +40,9 @@ body {
 
 /* 메인페이지 홍보 영상 부분 CSS */
 iframe {
-	width: 95%;
-	height: 100%;
-	min-width: 1150px;
-	min-height: 650px;
+	width : 100%;
+	height : 432px;
+	max-width: 768px;
 	justify-content: center;
 }
 
@@ -289,7 +288,7 @@ iframe {
 	<!-- 메인페이지 홍보 영상 코딩 -->
 	<div class="MainPromotion" align="center">
 		<!-- 아무영상이나 퍼가기로 연습해본 예시  -->
-		<iframe width="768" height="432"
+		<iframe 
 			src="https://www.youtube.com/embed/Ql-U70qBjE0?si=ReVHxVKqvStKv0So"
 			title="YouTube video player" frameborder="0"
 			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -338,13 +337,11 @@ iframe {
 	<!-- 메인화면에서 수출,수입, OEM제조, 브랜드 사업으로 갈 수 있는 박스(추후 버튼으로 바꿀 예정) -->
 	<div class="MainOthers">
 		<ul>
-			<li class="Othersactive"><a href="AboutUs/Export" class="click">수출
-					사업</a></li>
-			<li class="Othersactive"><a href="AboutUs/Import" class="click">수입
-					사업</a></li>
-			<li class="Othersactive"><a href="AboutUs/Oem" class="click">OEM제조</a></li>
-			<li class="Othersactive"><a href="AboutUs/OurBrand"
-				class="click">브랜드사업</a></li>
+			<li class="Othersactive"><a href="AboutUs/CEO" class="click">CEO 인사말</a></li>
+			<li class="Othersactive"><a href="AboutUs/OurBrand" class="click">회사소개</a></li>
+			<li class="Othersactive"><a href="AboutUs/CIBrand" class="click">CI & 브랜드소개 </a></li>
+			<li class="Othersactive"><a href="AboutUs/Import"
+				class="click">수입사업</a></li>
 		</ul>
 	</div>
 
@@ -380,7 +377,7 @@ iframe {
 	<br>
 	<br>
 	<br>
-
+	<jsp:include page="Common/ScrollToTopBtn.jsp" />
 
 	<jsp:include page="Common/Footer.jsp" />
 

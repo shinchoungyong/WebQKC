@@ -136,7 +136,7 @@ body {
 /* products body */
 .productBody {
    display: flex;
-   min-height: 100vh; /* 최소 높이를 100vh로 설정 */
+   min-height: 130vh; 
 }
 
 .container {
@@ -200,6 +200,8 @@ body {
    margin-top: 20px;
    font-size: 14px;
    color: #555;
+   border : 1px solid #ddd;
+   height : 100px;
 }
 /* 상품 이미지 사이즈 */
 #productEx {
@@ -217,6 +219,8 @@ body {
    font-weight: bold; /* 글씨 두껍게 */
    cursor: pointer; /* 마우스 커서 포인터 */
    transition: background-color 0.3s ease; /* 배경색 변화 애니메이션 */
+   margin-top: 10px;
+   float: right;
 }
 
 #golist:hover {
@@ -309,7 +313,7 @@ body {
             </tr>
          </table>
 
-         <div class="additional-info">111111111111111111111111111111111111111111111</div>
+         <div class="additional-info"><p>제품 설명</p></div>
 
          <button id="golist" onclick="history.back()">목록으로</button>
       </div>
