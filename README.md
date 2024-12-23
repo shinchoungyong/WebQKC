@@ -63,4 +63,3 @@
 ![image.png](image%201.png)
 
 ### [리뉴얼 후]
-ㅍ
